@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Oracle timecards",
+        "url": "https://aims-erp.aecomnet.com:4444/OA_HTML/AppsLocalLogin.jsp",
+        "img": "./assets/logo_oracle.png"
+    },
+    {
+        "name": "Aecom Ecosystem",
+        "url": "https://myecosystem.aecom.com/SitePages/Home.aspx",
+        "img": "./assets/logo_aecom_ecosystem.svg"
+    },
+    {
+        "name": "Aecom Workday",
+        "url": "https://wd5.myworkday.com/wday/authgwy/aecom/login-saml2.htmld",
+        "img": "./assets/logo_workday.png"
+    },
+    {
+        "name": "MyBenefit",
+        "url": "https://system.mybenefit.pl/aecom",
+        "img": "./assets/logo_myBenefit.png"
+    },
+    {
+        "name": "ePracownik urlopy",
+        "url": "http://e-urlopy.eu.aecomnet.com/#/auth/login",
+        "img": "./assets/logo_epracownik.png"
+    },
+    {
+        "name": "Lifeguard",
+        "url": "https://www.lifeguard.aecom.com/auth/login",
+        "img": "./assets/logo_lifeguard.png"
+    },
+    {
+        "name": "AECOM university",
+        "url": "https://degreed.com/?orgsso=aecom",
+        "img": "./assets/logo_university.png"
+    },
+    {
+        "name": "AECOM Help Desk",
+        "url": "https://aecom.service-now.com/sp?id=index",
+        "img": "./assets/logo_helpdesk.png"
+    }
+]
