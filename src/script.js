@@ -8,8 +8,8 @@ const time_ca = document.querySelector("#time-ca")
 
 setInterval(() => {
     time_pl.textContent = calculateTime("local")
-    time_us.textContent = calculateTime(-7)
-    time_ca.textContent = calculateTime(-9)
+    time_us.textContent = calculateTime(-5)
+    time_ca.textContent = calculateTime(-7)
 }, 500)
 
 resources.forEach((res) => {
