@@ -2,15 +2,24 @@ import resources from "./resources.json" assert { type: "json" }
 
 const container = document.querySelector("#list-container")
 
-const time_pl = document.querySelector("#time-pl")
-const time_us = document.querySelector("#time-us")
-const time_ca = document.querySelector("#time-ca")
+const time_pl_h = document.querySelector("#time-pl-h")
+const time_pl_m = document.querySelector("#time-pl-m")
+const time_us_h = document.querySelector("#time-us-h")
+const time_us_m = document.querySelector("#time-us-m")
+const time_ca_h = document.querySelector("#time-ca-h")
+const time_ca_m = document.querySelector("#time-ca-m")
 
 setInterval(() => {
-    time_pl.textContent = calculateTime("local")
-    time_us.textContent = calculateTime(-5)
-    time_ca.textContent = calculateTime(-7)
-}, 500)
+    const [pl_h, pl_m] = calculateTime("local")
+    time_pl_h.textContent = pl_h
+    time_pl_m.textContent = pl_m
+    const [us_h, us_m] = calculateTime(-5)
+    time_us_h.textContent = us_h
+    time_us_m.textContent = us_m
+    const [ca_h, ca_m] = calculateTime(-7)
+    time_ca_h.textContent = ca_h
+    time_ca_m.textContent = ca_m
+}, 1000)
 
 resources.forEach((res) => {
     const el = document.createElement("a")
@@ -36,6 +45,5 @@ function calculateTime(offset) {
     }
     const hours = time_timezone.getHours() < 10 ? `0${time_timezone.getHours()}` : time_timezone.getHours()
     const minutes = time_timezone.getMinutes() < 10 ? `0${time_timezone.getMinutes()}` : time_timezone.getMinutes()
-    const seconds = time_timezone.getSeconds() < 10 ? `0${time_timezone.getSeconds()}` : time_timezone.getSeconds()
-    return `${hours}:${minutes}`
+    return [hours,minutes]
 }
