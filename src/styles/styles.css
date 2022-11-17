@@ -1,25 +1,18 @@
 *,
 *::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #e5e5e5;
+  background-color: rgb(229, 229, 229);
   font-family: "engshrift", "aecom-sans", Arial, sans-serif;
-  color: #5b5b5b;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  color: rgb(91, 91, 91);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -28,23 +21,15 @@ body {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-end;
+  justify-content: space-between;
 }
-
 .header p {
   margin: 0;
   text-align: right;
   line-height: 1.4;
 }
-
 .header span {
   font-family: "Consolas", monospace;
 }
@@ -56,10 +41,8 @@ h1 {
 
 #list-container {
   padding-top: 2rem;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   border-top: 6px solid #84bd00;
 }
@@ -72,18 +55,14 @@ h1 {
   border: 6px solid transparent;
   text-decoration: none;
   color: inherit;
-  -webkit-transition: 300ms;
   transition: 300ms;
 }
-
 .card p {
   text-align: center;
 }
-
 .card:hover::before {
   height: 60px;
 }
-
 .card::before {
   content: "";
   width: calc(100% + 12px);
@@ -94,48 +73,90 @@ h1 {
   position: absolute;
   bottom: -6px;
   left: -6px;
-  -webkit-transition: 300ms;
   transition: 300ms;
   z-index: 1;
 }
-
 .card .title {
   position: relative;
   margin-top: 2rem;
   margin-bottom: 0;
   z-index: 3;
 }
-
 .card:hover .title {
   color: white;
 }
 
 .image-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 100px;
 }
-
 .image-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  -webkit-transition: 300ms;
+  filter: grayscale(1);
   transition: 300ms;
 }
 
 .card:hover img {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  filter: grayscale(0);
 }
-/*# sourceMappingURL=styles.css.map */
+
+.colon {
+  -webkit-animation: 0.5s linear 1s infinite alternate colon;
+          animation: 0.5s linear 1s infinite alternate colon;
+}
+
+@-webkit-keyframes colon {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes colon {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#shortcuts {
+  display: flex;
+  gap: 1rem;
+  float: right;
+  margin-top: 2rem;
+}
+
+.shortcut {
+  display: block;
+  text-decoration: none;
+  color: rgba(91, 91, 91, 0.5);
+  transition: 100ms ease-in-out;
+}
+.shortcut:hover {
+  color: #84bd00;
+  transform: scale(1.05);
+}
+.shortcut svg {
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=styles.css.map */
