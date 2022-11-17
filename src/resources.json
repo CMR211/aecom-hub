@@ -1,7 +1,7 @@
 [
     {
         "name": "Oracle timecards",
-        "url": "https://aims-erp.aecomnet.com:4444/OA_HTML/AppsLocalLogin.jsp",
+        "url": "https://aims-prod.aecomnet.com:4444/OA_HTML/AppsLocalLogin.jsp",
         "img": "./assets/logo_oracle.png"
     },
     {
@@ -30,12 +30,12 @@
         "img": "./assets/logo_lifeguard.png"
     },
     {
-        "name": "AECOM university",
+        "name": "Aecom University",
         "url": "https://degreed.com/?orgsso=aecom",
         "img": "./assets/logo_university.png"
     },
     {
-        "name": "AECOM Help Desk",
+        "name": "Aecom Help Desk",
         "url": "https://aecom.service-now.com/sp?id=index",
         "img": "./assets/logo_helpdesk.png"
     }
