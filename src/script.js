@@ -4,21 +4,28 @@ const container = document.querySelector("#list-container")
 
 const time_pl_h = document.querySelector("#time-pl-h")
 const time_pl_m = document.querySelector("#time-pl-m")
+const time_ir_h = document.querySelector("#time-ir-h")
+const time_ir_m = document.querySelector("#time-ir-m")
 const time_us_h = document.querySelector("#time-us-h")
 const time_us_m = document.querySelector("#time-us-m")
-const time_ca_h = document.querySelector("#time-ca-h")
-const time_ca_m = document.querySelector("#time-ca-m")
+
+const isDST = () => {
+    const today = new Date()
+    const day = today.getUTCDate()
+    const month = today.getUTCMonth() + 1
+    return
+}
 
 setInterval(() => {
     const [pl_h, pl_m] = calculateTime("local")
     time_pl_h.textContent = pl_h
     time_pl_m.textContent = pl_m
-    const [us_h, us_m] = calculateTime(-5)
+    const [ir_h, is_m] = calculateTime(-1)
+    time_ir_h.textContent = ir_h
+    time_ir_m.textContent = is_m
+    const [us_h, us_m] = calculateTime(-6)
     time_us_h.textContent = us_h
     time_us_m.textContent = us_m
-    const [ca_h, ca_m] = calculateTime(-7)
-    time_ca_h.textContent = ca_h
-    time_ca_m.textContent = ca_m
 }, 1000)
 
 resources.forEach((res) => {
@@ -45,5 +52,5 @@ function calculateTime(offset) {
     }
     const hours = time_timezone.getHours() < 10 ? `0${time_timezone.getHours()}` : time_timezone.getHours()
     const minutes = time_timezone.getMinutes() < 10 ? `0${time_timezone.getMinutes()}` : time_timezone.getMinutes()
-    return [hours,minutes]
+    return [hours, minutes]
 }
