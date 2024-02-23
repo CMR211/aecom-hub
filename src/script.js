@@ -44,7 +44,7 @@ function calculateTime(offset) {
     let time_timezone
     if (offset !== "local") {
         const time_local = new Date()
-        const time_utc = time_local.getTime() + time_local.getTimezoneOffset() * 60000
+        const time_utc = time_local.getTime() - time_local.getTimezoneOffset() * 60000
         time_timezone = new Date(time_utc + 3600000 * offset)
     }
     if (offset === "local") {
