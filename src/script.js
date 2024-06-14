@@ -1,4 +1,4 @@
-import resources from "./resources.json" assert { type: "json" }
+import resources from "./resources.json" with { type: "json" }
 
 const container = document.querySelector("#list-container")
 
